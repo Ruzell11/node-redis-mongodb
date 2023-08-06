@@ -2,15 +2,17 @@
 #Base image
 FROM node:18
 # working directory
-WORKDIR /app
+WORKDIR /server
 # Current directory "."
 COPY package.json .
 #yarn or npm
 RUN npm install
 #optimization that's why copy first the package json
 COPY . .
+#build
+RUN npm run build
 # this port will let the other docker image know that this application is using that port
 EXPOSE 3000
 
 #command to run the application
-CMD ["node" , "index.js"]
+CMD ["npm" , "start"]
