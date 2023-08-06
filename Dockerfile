@@ -2,7 +2,7 @@
 #Base image
 FROM node:18
 # working directory
-WORKDIR /server
+WORKDIR /app
 # Current directory "."
 COPY package.json .
 #yarn or npm
@@ -12,7 +12,10 @@ COPY . .
 #build
 RUN npm run build
 # this port will let the other docker image know that this application is using that port
-EXPOSE 3000
+EXPOSE 8000
 
 #command to run the application
-CMD ["npm" , "start"]
+CMD ["npm" , "run" , "dev"]
+
+#production
+# CMD ["npm" , "start"]
