@@ -4,12 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel server -d build",
+    "start": "node ./build/main.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.22.9",
+    "@babel/preset-env": "^7.22.9",
+    "babel-preset-env": "^1.7.0"
   }
 }
