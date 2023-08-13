@@ -1,0 +1,14 @@
+version: "3"
+services:
+  node-app-container:
+    build: .
+    ports:
+      - "8000:4000"
+    volumes:
+      - ./server:/app/server
+      - /app/node_modules
+    environment:
+      - PORT=4000
+    # import the env from the app  
+    # env_file:
+    #   - ./env

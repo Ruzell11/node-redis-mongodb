@@ -1,0 +1,10 @@
+version: "3"
+services:
+  node-app-container:
+    build:
+      context: .
+      args:
+        SERVER: production
+    environment:
+      - SERVER=production
+    command: npm start
