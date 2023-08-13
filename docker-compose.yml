@@ -17,5 +17,10 @@ services:
     env_file:
       - ./.env
 
+  redis-caching-container:
+    image: redis
+
 volumes:
   mongo-db:
+
+  
