@@ -6,6 +6,7 @@ const getMovieList = async (req, res) => {
         company: 'Redis',
         age: 29
     })
+    console.log("ITS RUNNING")
     res.json({ message: "Movie routes is working fine" })
 }
 
