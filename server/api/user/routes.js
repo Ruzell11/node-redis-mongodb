@@ -4,7 +4,7 @@ import controller from './controller';
 const router = express.Router()
 
 
-router.get('/' , (req , res) => controller.userRegister(req , res))
+router.post('/store' , (req , res) => controller.userRegister(req , res))
 
 
 export default {router}

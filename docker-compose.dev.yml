@@ -1,13 +1,12 @@
 version: "3"
 services:
-  nginx:
-    ports:
-      - "3000:80"
   node-app-container:
     build:
       context: .
       args:
         SERVER: development
+    ports:
+        - "3000:3000"
     volumes:
       - ./server:/app/server
       - /app/node_modules
