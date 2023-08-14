@@ -13,6 +13,6 @@ services:
       context: .
       args:
         SERVER: production
-    environment:
-      - SERVER=production
+    env_file:
+      - ./.env
     command: npm start
