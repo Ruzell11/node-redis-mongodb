@@ -13,6 +13,13 @@ services:
       context: .
       args:
         SERVER: production
+      deploy:
+        replicas: 6
+        restart_policy:
+          condition: any
+        update_config:
+          parallelism: 2
+          delay: 10s
     env_file:
       - ./.env
     command: npm start
